@@ -1,5 +1,5 @@
-From tomcat
+From nginx
 Maintainer jitesh
-ADD template.php /usr/local/tomcat/webapps
-CMD ["catalina.sh", "run"]
-EXPOSE 8080
+ADD template.php /usr/share/nginx/html
+CMD ["nginx", "-g", "daemon off;"]
+EXPOSE 80
