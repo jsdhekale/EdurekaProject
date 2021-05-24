@@ -16,7 +16,7 @@
   - name: clone my repo
     git: repo=https://github.com/jsdhekale/AnsibleDockerdemo.git dest=/tmp/gitrepo
   - name: build the dockerfile
-    command: build -t myimage:edurekaproject21 .
+    command: chdir=~ build -t myimage:edurekaproject21 .
   - name: login docker
     command: docker login --username jsdhekale --password Jit@1489
   - name: tag the image
