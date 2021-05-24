@@ -16,11 +16,11 @@
   - name: clone my repo
     git: repo=https://github.com/jsdhekale/EdurekaProject.git dest=~/edurekaproject21
   - name: build the dockerfile
-    command: chdir=~/ build -t jsdhekale/edurekaproject21:new .
+    command: chdir=~/ build -t edurekaproject21 .
   - name: login docker
     command: docker login --username jsdhekale --password Edureka@21
   - name: tag the image
-    command: docker tag jsdhekale/edurekaproject21:new edurekaproject21:v2 
+    command: docker tag edurekaproject21 edurekaproject21:v2 
   - name: push
     command: docker push edurekaproject21:v2
   - name: create container
