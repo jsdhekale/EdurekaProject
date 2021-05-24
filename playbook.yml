@@ -16,6 +16,6 @@
   - name: clone my repo
     git: repo=https://github.com/jsdhekale/AnsibleDockerdemo.git dest=/tmp/gitrepo
   - name: build the dockerfile
-    command: chdir=/tmp/gitrepo build -t myimage:edurekaproject21 .
+    command: build -t myimage:edurekaproject21 .
   - name: Run the image to deploy the app
     command: docker run -itd -p myimage:edurekaproject21
