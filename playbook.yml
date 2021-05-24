@@ -2,9 +2,9 @@
   become: true
   become_user: root
   tasks:
-  - name: install tomcat
+  - name: install nginx
     yum: name=tomcat state=present
-  - name: start tomcat
+  - name: start nginx
     service: name=tomcat state=started
   - name: Install git & docker
     yum: name={{item}} state=present
