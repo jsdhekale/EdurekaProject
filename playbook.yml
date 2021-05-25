@@ -10,7 +10,7 @@
   - name: start docker
     service: name=docker state=started
   - name: clone my repo
-    git: repo=https://github.com/jsdhekale/EdurekaProject.git dest=~/edurekaproject21
+    git: repo=https://github.com/jsdhekale/EdurekaProject.git dest=~/devops
   - name: build the dockerfile
-    command: chdir=~/edurekaproject21 docker build -t edurekaproject2021:successful .
+    command: chdir=~/devops docker build -t edurekaproject2021:successful .
  
