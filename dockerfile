@@ -1,6 +1,7 @@
 From ubuntu
 Run apt-get update
 Run apt-get install nginx -y
-copy template.php /var/www/html
-CMD ["nginx", "-g", "daemon off;"]
+copy template.php /var/www/html/
 EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+
