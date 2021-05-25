@@ -3,9 +3,9 @@
   become_user: root
   tasks:
   - name: install nginx
-    yum: name=tomcat state=present
+    yum: name=ngnix state=present
   - name: start nginx
-    service: name=tomcat state=started
+    service: name=nginx state=started
   - name: Install git & docker
     yum: name={{item}} state=present
     loop:
