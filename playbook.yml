@@ -13,5 +13,3 @@
     git: repo=https://github.com/jsdhekale/EdurekaProject.git dest=~/devops
   - name: build the dockerfile
     command: chdir=~/devops docker build -t edurekaproject2021:successful .
-  - name: create container
-    command: sudo docker run -itd -P edurekaproject2021:container 
