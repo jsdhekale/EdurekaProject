@@ -14,4 +14,4 @@
   - name: build the dockerfile
     command: chdir=~/devops docker build -t edurekaproject2021:successful .
   - name: create container
-    command: sudo docker run -itd -P edurekaproject2021:successful:$BUILD_NUMBER 
+    command: sudo docker run -itd -P edurekaproject2021:container 
