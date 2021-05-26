@@ -12,6 +12,6 @@
   - name: clone my repo
     git: repo=https://github.com/jsdhekale/EdurekaProject.git dest=~/devops21
   - name: build the dockerfile
-    command: chdir=~/devops21 docker build -t edurekaproject2021:successful .
+    command: chdir=~/devops21 docker build -t devopsproject2022:successful .
   - name: create container
-    command: docker run -itd -P edurekaproject2021:successful
+    command: docker run -itd -p devopsproject2022:successful
