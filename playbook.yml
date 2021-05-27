@@ -2,10 +2,6 @@
   become: true
   become_user: root
   tasks:
-  - name: Download Google Chrome
-    command: sudo curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add
-  - name: Install Google Chrome
-    command: sudo apt-get -y install google-chrome-stable
   - name: Install git & docker
     yum: name={{item}} state=present
     loop:
