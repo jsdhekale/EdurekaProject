@@ -2,16 +2,10 @@
   become: true
   become_user: root
   tasks:
-  - name: Download Chrome Driver
-    command: sudo wget https://chromedriver.storage.googleapis.com/80.0.3987.106/chromedriver_linux64.zip
-  - name: Unzip Chrome Driver 
-    command: sudo unzip chromedriver_linux64.zip
-  - name: Mv Chrome Driver
-    command: sudo mv chromedriver /usr/bin/chromedriver
-  - name: Install Chrome Browser
-    command: sudo curl https://intoli.com/install-google-chrome.sh | bash
-  - name: Mv Google Chrome
-    command: sudo mv /usr/bin/google-chrome-stable /usr/bin/google-chrome 
+  - name: Download Google Chrome
+    command: wget sudo curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add
+  - name: Install Google Chrome
+    command: sudo apt-get -y install google-chrome-stable
   - name: Install git & docker
     yum: name={{item}} state=present
     loop:
