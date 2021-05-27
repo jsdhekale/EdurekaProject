@@ -14,7 +14,7 @@
     command: sudo mv chromedriver /usr/bin/chromedriver
   - name: Install Chrome Browser
     command: sudo curl https://intoli.com/install-google-chrome.sh | bash
-   -name: Mv Google Chrome
+  - name: Mv Google Chrome
     command: sudo mv /usr/bin/google-chrome-stable /usr/bin/google-chrome 
   - name: Install git & docker
     yum: name={{item}} state=present
