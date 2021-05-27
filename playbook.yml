@@ -4,8 +4,8 @@
   tasks:
   - name: Install jdk
     package:
-    name: openjdk-8-jdk
-    state: present
+     name: openjdk-8-jdk
+     state: present
   - name: Download Chrome Driver
     command: sudo wget https://chromedriver.storage.googleapis.com/80.0.3987.106/chromedriver_linux64.zip
   - name: Unzip Chrome Driver 
