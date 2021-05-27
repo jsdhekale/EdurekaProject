@@ -2,10 +2,6 @@
   become: true
   become_user: root
   tasks:
-  - name: Install jdk
-    command: get_url http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60-linux-x64.rpm  dest=~/devops21
-  - name: Install Java JDK rpm from a local file
-    command: yum /opt/jdk-8u60-linux-x64.rpm
   - name: Download Chrome Driver
     command: sudo wget https://chromedriver.storage.googleapis.com/80.0.3987.106/chromedriver_linux64.zip
   - name: Unzip Chrome Driver 
