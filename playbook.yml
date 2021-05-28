@@ -14,4 +14,4 @@
   - name: build the dockerfile
     command: chdir=~/devops21 docker build -t devopsproject2021:successful .
   - name: create container
-    command: docker run -itd -p 8989:80 devopsproject2021:successful
+    command: docker run -itd -p 8686:80 devopsproject2021:successful
